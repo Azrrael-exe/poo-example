@@ -18,12 +18,14 @@ protected:
 
 class AnalogSensor : public SensorABC<float> {
 public:
-    AnalogSensor(uint8_t pin, float scale) : pin(pin), scale(scale) {} // Constructor initialization list
+    AnalogSensor(uint8_t id, uint8_t pin, float scale) : id(id), pin(pin), scale(scale) {} // Constructor initialization list
     float getRead() override; // Override base class method
     float getScale(); // Declaration of the getScale method
     void setScale(float new_scale); // Declaration of the setScale method
     void call() override;
+    uint8_t getId(); // Declaration of the getId method
 protected:
+    uint8_t id;
     uint8_t pin;
     float scale;
     float value;

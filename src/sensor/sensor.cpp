@@ -15,6 +15,10 @@ void AnalogSensor::setScale(float new_scale) {
     }
 }
 
+uint8_t AnalogSensor::getId(){
+    return this->id;
+}
+
 long AnalogSensor::read(){
     this->temp_read[this->temp_index] = analogRead(this->pin);
 }

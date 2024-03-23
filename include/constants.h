@@ -1,7 +1,7 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-#include <arduino.h>
+#include <Arduino.h>
 
 namespace Constants {
     uint8_t analogSensorPin = A0;
